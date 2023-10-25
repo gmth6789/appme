@@ -1,4 +1,5 @@
 <template>
+<Topbar />
   <div>
     <Nuxt />
   </div>

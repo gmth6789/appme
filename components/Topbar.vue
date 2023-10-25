@@ -1,5 +1,5 @@
 <template>
-<view class="topbar">
+<div class="header">
 		<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
 			style="position: absolute; width: 0; height: 0">
 			<symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" id="icon-bug">
@@ -21,14 +21,14 @@
 				<text class="title-text">{{navigationBarTitleText}}</text>
 			</view>
 			<view class="navbar-right pointer">
-				<!-- #ifdef H5 -->
+		
 				<view v-if="logs.length" @click="showErrorLogs" class="menu-item debug pointer navbar-right-item-gap">
 					<svg class="svg-icon">
 						<use xlink:href="#icon-bug"></use>
 					</svg>
 					<uni-badge class="debug-badge" :text="logs.length" type="error"></uni-badge>
 				</view>
-				<!-- #endif -->
+				
 
 				<picker class="navbar-right-item-gap" mode="selector" :range="themes" range-key="text" :value="themeIndex" @change="changeTheme">
 					<uni-icons type="color-filled" size="24" color="#999" />
@@ -65,15 +65,14 @@
 				</scroll-view>
 			</view>
 		</uni-popup>
-		<!-- 冗余代码，临时处理 uni-datetime-picker 国际化不生效的问题 -->
-		<!-- #ifdef H5 -->
+		
 		<uni-datetime-picker type="date" v-show="false"></uni-datetime-picker>
-		<!-- #endif -->
-	</view>
+
+	</div>
 </template>
 
-<style>
-@import '/assets/style.css';
+<style lang="scss">
+
 
 	.header {
 		height: 60px;
