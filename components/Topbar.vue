@@ -72,7 +72,7 @@
 	</view>
 </template>
 
-<style lang="scss">
+<style>
 @import '/assets/style.css';
 
 	.header {
