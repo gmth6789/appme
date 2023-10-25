@@ -1,5 +1,6 @@
 <template>
   <div class="container">
+  <Topbar />
     <div>
       <Logo />
       <h1 class="title">

@@ -1,5 +1,5 @@
 <template>
 <div>
-<h1>hi top</h1>
+<h1>hi left</h1>
 </div>
 </template>
